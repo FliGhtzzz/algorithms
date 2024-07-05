@@ -1,5 +1,5 @@
-I will put the *AC-code* of all cses problems I have solved and my methods of solving them here.
-Will be presented in the following form
+I will ut the *AC-code* of all cses problems I have solved and my methods of solving them here.
+Will be presented in the following form `(sort by the task number)`
 ```cpp
 //question number
 /*
