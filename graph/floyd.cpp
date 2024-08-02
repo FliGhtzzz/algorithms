@@ -1,24 +1,9 @@
-#pragma GCC optimize("Ofast,unroll-loops,no-stack-protector,fast-math")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #include<bits/stdc++.h>
-#include<ext/pb_ds/assoc_container.hpp>
-using namespace __gnu_pbds;
 using namespace std;
-#define pb push_back
-#define mp make_pair
-#define F first
-#define S second
-#define pii pair<int, int>
-#define pq priority_queue
-#define q queue
-#define cl clear
-#define elif else if
 #define fast ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)
 #define pll pair<long long, long long>
 #define ll long long
 const long long INF=2e18;
-/********************************************************/
-/********************************************************/
 int node, edge, s;
 const int max_node=510;
 ll dis[max_node][max_node]; //max_nodes

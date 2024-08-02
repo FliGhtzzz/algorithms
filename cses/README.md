@@ -9,7 +9,7 @@ My metheds and opinions of soving this problems
 ```
 EX:
 ```cpp
-//Weird Algorithm-1068
+//Weird Algorithm-1068  
 /*using while() to detect if n is 1 or not, still need to prevent n overflow if u r trying to use int*/
 #include<bits/stdc++.h>
 using namespace std;
