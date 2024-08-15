@@ -1,0 +1,65 @@
+#include<bits/stdc++.h>
+using namespace std;
+/***************************************************/  //getting min of the array in[l, r] in O(log(r-l)) & update a pos in O(log(MAXN))
+const int MAXN=2e5+5, NUM=1e9+7;
+int m=1, x, y, a, b, c; 
+vector<int> tree(MAXN*4, NUM), val(MAXN, NUM);
+void build() {
+ //   for(m=1;m<n+2;m<<=1);
+    for(int i=0;i<x;i++) tree[i+x]=val[i];
+    for(int i=x-1;i;i--) tree[i]=min(tree[i << 1], tree[i << 1 | 1]);
+}
+void modify(int pos, int v) {
+    pos+=x-1;
+    tree[pos]=v;
+    while(pos){
+        pos>>=1;
+        tree[pos]=min(tree[pos<<1], tree[pos<<1|1]);
+    }
+}
+int query(int l, int r) {
+    int ans=NUM;
+    for(l+=x, r+=x;l<=r;l>>=1,r>>=1) {if(l&1) ans=min(ans, tree[l++]); if(!(r&1)) ans=min(ans, tree[r--]);} return ans;
+}
+signed main() {
+    cin>>x>>y;
+    for(int i=0;i<x;i++) cin>>val[i]; 
+    build();
+    for(int i=0;i<y;i++) { 
+        cin>>a>>b>>c; 
+        if(a==1) modify(b, c);
+        else cout<<query(--b, --c)<<'\n';
+    }
+}
+/***************************************************/  //getting sum of the array in[l, r] in O(log(r-l)) & update a pos in O(log(MAXN))
+#define int long long
+const long long MAXN=2e5+5, NUM=1e9+7;
+int m=1, x, y, a, b, c; 
+vector<int> tree(MAXN*4, 0), val(MAXN, 0);
+void build() {
+ //   for(m=1;m<n+2;m<<=1);
+    for(int i=0;i<x;i++) tree[i+x]=val[i];
+    for(int i=x-1;i;i--) tree[i]=tree[i << 1]+tree[i << 1 | 1];
+}
+void modify(int pos, int v) {
+    pos+=x-1;
+    tree[pos]=v;
+    while(pos){
+        pos>>=1;
+        tree[pos]=tree[pos<<1]+tree[pos<<1|1];
+    }
+}
+long long query(int l, int r) {
+    int ans=0;
+    for(l+=x, r+=x;l<=r;l>>=1,r>>=1) {if(l&1) ans+=tree[l++]; if(!(r&1)) ans+=tree[r--];} return ans;
+}
+signed main() {
+    cin>>x>>y;
+    for(int i=0;i<x;i++) cin>>val[i]; 
+    build();
+    for(int i=0;i<y;i++) { 
+        cin>>a>>b>>c; 
+        if(a==1) modify(b, c);
+        else cout<<query(--b, --c)<<'\n';
+    }
+}
