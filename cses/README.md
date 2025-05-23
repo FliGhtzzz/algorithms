@@ -26,4 +26,4 @@ signed main() {
 }
 ```
 
-[My cses profile](https://cses.fi/problemset/user/224562/)
+[My cses profile](https://cses.fi/user/318680)
