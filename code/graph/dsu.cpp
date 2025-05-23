@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define elif else if
 #define fast ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)
 vector<int> boss(10), sz(10);
 void build_dsu(int x) {
@@ -13,6 +14,7 @@ signed find(int x) {
 }
 void Union(int a, int b) {  //可以使每次合併一定是小的合到大的
     int fa= find(a), fb=find(b);   
+    if(fa==fb) return;  
     if(sz[fb] > sz[fa]) swap(fa, fb);
     sz[fa]+=sz[fb];
     boss[fb]=fa;

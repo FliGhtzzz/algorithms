@@ -1,7 +1,16 @@
+// #pragma GCC optimize("Ofast,unroll-loops,no-stack-protector,fast-math")
+// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #include<bits/stdc++.h>
-#include<ext/pb_ds/assoc_container.hpp>
+#include<bits/extc++.h>
 using namespace __gnu_pbds;
 using namespace std;
+#define int long long
+#define pb push_back
+#define pii pair<long, long>
+#define elif else if
+#define flightzz ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+random_device rd;
+mt19937 randommm(rd());
 /********************************************************/
 /********************************************************/
 typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update> order_set;
@@ -22,3 +31,12 @@ struct custom_hash {
 gp_hash_table<int, int, custom_hash> cnt;
 /********************************************************/
 /********************************************************/
+void solve() {
+    int n, m;
+    string s;
+}
+signed main() {
+    flightzz;
+    int q=1;
+    while(q--) solve();
+}
