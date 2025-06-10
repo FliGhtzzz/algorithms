@@ -1,1 +1,0 @@
-{"name":"Local: z","url":"c:\\Users\\User\\Desktop\\C++模板\\string\\z.cpp","tests":[{"id":1729253570952,"input":"abcabca","output":"abcabcaa"},{"id":1729255475233,"input":"abcababcab ","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\User\\Desktop\\C++模板\\string\\z.cpp","group":"local","local":true}

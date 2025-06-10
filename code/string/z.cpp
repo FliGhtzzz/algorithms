@@ -12,6 +12,7 @@ vector<int> z_function(string s) {
     }
     if (i + z[i] - 1 > r) l = i, r = i + z[i] - 1;
   }
+  cout<<z[0];
   return z;
 }
 signed main() {
