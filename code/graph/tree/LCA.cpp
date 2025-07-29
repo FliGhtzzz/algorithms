@@ -17,7 +17,7 @@ void dfs(int node, int d=0) {
 signed jump(int node, int step) {
     for(int i=0;i<26;i++) {
         int j=1<<i;
-        if(j&step) node=dp[i][node];
+        if(j&step) {node=dp[i][node];break;}
     }
     return node;
 }
